@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glow Beauty Parlour Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="image/logo.png" alt="Logo">
+            <h2>Glow Beauty Parlour</h2>
+        </div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#customers">Customers</a></li>
+            <li><a href="#appointments">Appointments</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-text">
+        <h1>Glow Beauty Parlour Management System</h1>
+        <p>Manage appointments, customers, beauty services and salon activities through one simple dashboard.</p>
+        <a href="#appointments"><button>Book Appointment</button></a>
+    </div>
+</section>
+
+<section class="dashboard">
+    <div class="card">
+        <h2 id="customerCount">0</h2>
+        <p>Total Customers</p>
+    </div>
+    <div class="card">
+        <h2 id="serviceCount">6</h2>
+        <p>Total Services</p>
+    </div>
+    <div class="card">
+        <h2 id="appointmentCount">0</h2>
+        <p>Total Appointments</p>
+    </div>
+</section>
+
+<section class="services" id="services">
+    <h1>Our Beauty Services</h1>
+    <div class="service-container">
+        <div class="service-card">
+            <img src="image/facial.jpg">
+            <h3>Facial Treatment</h3>
+            <p>Professional glowing facial treatment.</p>
+            <span>Rs.1500</span>
+        </div>
+        <div class="service-card">
+            <img src="image/haircut.jpg">
+            <h3>Hair Cut & Styling</h3>
+            <p>Modern haircut and styling.</p>
+            <span>Rs.1000</span>
+        </div>
+        <div class="service-card">
+            <img src="image/makeup.jpg">
+            <h3>Bridal Makeup</h3>
+            <p>Party and bridal makeup.</p>
+            <span>Rs.5000</span>
+        </div>
+        <div class="service-card">
+            <img src="image/manicure.jpg">
+            <h3>Manicure</h3>
+            <p>Nail beauty treatment.</p>
+            <span>Rs.1200</span>
+        </div>
+        <div class="service-card">
+            <img src="image/waxing.jpg">
+            <h3>Waxing</h3>
+            <p>Safe hygienic waxing.</p>
+            <span>Rs.800</span>
+        </div>
+        <div class="service-card">
+            <img src="image/spa.jpg">
+            <h3>Spa & Massage</h3>
+            <p>Relaxing full body massage.</p>
+            <span>Rs.2500</span>
+        </div>
+    </div>
+</section>
+
+<section class="customers" id="customers">
+    <h1>Customer Management</h1>
+    <form id="customerForm">
+        <input type="text" id="customerName" placeholder="Customer Name" required>
+        <input type="text" id="customerPhone" placeholder="Phone Number" required>
+        <input type="email" id="customerEmail" placeholder="Email Address">
+        <input type="text" id="customerAddress" placeholder="Address">
+        <button type="submit">Add Customer</button>
+    </form>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="customerTable"></tbody>
+    </table>
+</section>
+
+<section class="customers" id="appointments">
+    <h1>Appointment Management</h1>
+    <form id="appointmentForm">
+        <input type="text" id="appCustomer" placeholder="Customer Name" required>
+        
+        <select id="appService" required>
+            <option value="">Select Service</option>
+            <option value="Facial Treatment">Facial Treatment</option>
+            <option value="Hair Cut & Styling">Hair Cut & Styling</option>
+            <option value="Bridal Makeup">Bridal Makeup</option>
+            <option value="Manicure">Manicure</option>
+            <option value="Waxing">Waxing</option>
+            <option value="Spa & Massage">Spa & Massage</option>
+        </select>
+        
+        <input type="date" id="appDate" required>
+        <input type="time" id="appTime" required>
+        <button type="submit">Book Appointment</button>
+    </form>
+    <table>
+        <thead>
+            <tr>
+                <th>Customer Name</th>
+                <th>Service Selected</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="appointmentTable"></tbody>
+    </table>
+</section>
+
+<footer>
+    <p>© 2026 Glow Beauty Parlour Management System</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
